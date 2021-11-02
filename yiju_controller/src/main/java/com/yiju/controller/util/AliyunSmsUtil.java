@@ -99,7 +99,7 @@ public class AliyunSmsUtil {
         long nowTime = date.getTime();
         System.out.println("发送时间："+nowTime);
         //发短信
-        SendSmsResponse response =sendSms("15927170300",code); // TODO 填写你需要测试的手机号码
+        SendSmsResponse response =sendSms("15927270000",code); // TODO 填写你需要测试的手机号码
         Thread.sleep(3000);
         long rTime = new Date().getTime();
         System.out.println("发送成功时间："+rTime);
