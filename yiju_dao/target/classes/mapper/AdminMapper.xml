@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yiju.dao.IAdminDao">
+
+    <!--获取所有用户信息-->
+    <select id="findAllUsers" resultType="com.yiju.bean.UserInfo">
+        select * from tb_user
+    </select>
+
+    <!--根据用户id获取用户认证信息-->
+    <select id="getUserAuthById">
+        select * from tb_user_auth where user_id = #{user_id}
+    </select>
+
+    <!--根据用户id删除用户-->
+    <delete id="deleteUserById">
+        delete from tb_user where user_id = #{user_id}
+    </delete>
+
+    <!--FIXME 需要(可以)修改哪些信息-->
+    <update id="updateUser" parameterType="com.yiju.bean.UserInfo">
+#         update tb_user set
+    </update>
+
+    <!--获取所有图片信息-->
+    <select id="findAllImages" resultType="com.yiju.bean.Image">
+        select * from tb_img
+    </select>
+
+    <!--获取所有收藏信息-->
+    <select id="findAllCollects" resultType="com.yiju.bean.Collect">
+        select * from tb_collect
+    </select>
+
+</mapper>
